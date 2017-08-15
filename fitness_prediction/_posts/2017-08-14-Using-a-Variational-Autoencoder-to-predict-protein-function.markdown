@@ -183,7 +183,7 @@ td{
 |:-------------:|:-------------:|:-----:|
 |	Independent	| 0.42| 0.49 |
 |   Epistatic (Hopf et al.)    | 0.59     | 0.52  |
-| VAE | 0.62     |  0.56  |
+| VAE | 0.63     |  0.56  |
 
 
 
@@ -234,7 +234,7 @@ In the following segment, I touch on this, as well as other areas of this approa
 
 ## Conclusion
 
-This post serves as a proof of concept to demonstrate the ability of VAEs in capturing correlations in protein sequences. Interestingly, it works comparably to the "state of the art" methods that are based on Potts models. I am not the only one who has noticed this, and as mentioned before, Prof. Marks lab has been working on a similar idea independently. In fact John Ingraham and Debora Marks have also written a nice paper on a variational inference as applicable to protein structure prediction[5]. However, I think that we are not currently using the full power of the model in practice. I hope that this post can help me and other interested researchers to improve on these results. Suggestions, ideas, and comments are welcome.  
+This post serves as a proof of concept to demonstrate the ability of VAEs in capturing correlations in protein sequences. Interestingly, it works comparably to the "state of the art" methods that are based on Potts models. I am not the only one who has noticed this, and as mentioned before, Debora Marks' lab has been working on a similar idea independently. In fact John Ingraham and Debora Marks have also written a nice paper on a variational inference as applicable to protein structure prediction[5]. However, I think that we are not currently using the full power of the model in practice. I hope that this post can help me and other interested researchers to improve on these results. Suggestions, ideas, and comments are welcome.  
 
 References
 
