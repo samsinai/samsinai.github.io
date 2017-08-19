@@ -22,8 +22,11 @@ categories: jekyll update
 
 </script>
 
-<script type="text/javascript"
-        src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+<script type="text/javascript" async
+  src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML">
+</script>
+
+
 
 
 In this post I report an application of a Variational Auto-Encoder to predict the effects of mutations on protein function.  This post can serve as an "open notebook" for interested machine learning researchers to suggest improvements. If you think you have good ideas upon reading this, do not hesitate to contact me (you can find my contact information at the footer of this page). 
