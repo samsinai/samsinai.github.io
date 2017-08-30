@@ -2,7 +2,7 @@
 layout: post
 title:  "Using a Variational Auto-encoder to predict protein function"
 date:   2017-08-14 17:59:35 -0400
-author: This work was done in collaboration with Eric Kelsic. I'm also thankful to Pierce Odgen, Surojit Biswas, Gleb Kuznetsov, and Jeffery Gerold for helpful comments.
+author: This work was done in collaboration with Eric Kelsic. I'm also thankful to Pierce Ogden, Surojit Biswas, Gleb Kuznetsov, and Jeffery Gerold for helpful comments.
 categories: jekyll update
 ---
 
