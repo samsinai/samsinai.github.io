@@ -31,8 +31,8 @@ categories: jekyll update
 
 
 
-In this post I report an application of a Variational Auto-Encoder to predict the effects of mutations on protein function.  This post can serve as an "open notebook" for interested machine learning researchers to suggest improvements. If you think you have good ideas upon reading this, do not hesitate to contact me (you can find my contact information at the footer of this page). 
-
+In this post I report an application of a Variational Auto-Encoder to predict the effects of mutations on protein function.  This post can serve as an "open notebook" for interested machine learning researchers to suggest improvements. If you think you have good ideas upon reading this, do not hesitate to contact me (you can find my contact information at the footer of this page). **NEWS**:I'm presenting this work at [NIPS MLCB workshop](https://mlcb.github.io/) (see schedule), come talk to me if you are interested.  
+ 
 ## Big Picture
 Proteins are responsible for the most diverse set of functions in biology. What proteins do is largely determined by their sequence (and conditions under which they fold). The ability to predict whether a change in sequence will affect their function is extremely valuable. There is a clear engineering/clinical incentive to modify protein function. For instance, my collaborators synthesize massive libraries of AAV variants, hoping to find effective viral vectors for gene therapy. 
 
