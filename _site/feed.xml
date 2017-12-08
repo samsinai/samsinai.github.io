@@ -1,5 +1,5 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.4.3">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2017-08-15T19:47:40+04:30</updated><id>http://localhost:4000/</id><title type="html">Sam Sinai’s blog</title><subtitle>This blog is dedicated to communicating my work in computational biology. 
-</subtitle><entry><title type="html">Using a Variational Auto-encoder to predict protein function</title><link href="http://localhost:4000/jekyll/update/2017/08/15/Using-a-Variational-Autoencoder-to-predict-protein-function.html" rel="alternate" type="text/html" title="Using a Variational Auto-encoder to predict protein function" /><published>2017-08-15T02:29:35+04:30</published><updated>2017-08-15T02:29:35+04:30</updated><id>http://localhost:4000/jekyll/update/2017/08/15/Using-a-Variational-Autoencoder-to-predict-protein-function</id><content type="html" xml:base="http://localhost:4000/jekyll/update/2017/08/15/Using-a-Variational-Autoencoder-to-predict-protein-function.html">&lt;script type=&quot;text/x-mathjax-config&quot;&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.4.3">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2017-12-07T21:07:36-08:00</updated><id>http://localhost:4000/</id><title type="html">Sam Sinai’s blog</title><subtitle>This blog is dedicated to communicating my work in computational biology. 
+</subtitle><entry><title type="html">Using a Variational Auto-encoder to predict protein function</title><link href="http://localhost:4000/jekyll/update/2017/08/14/Using-a-Variational-Autoencoder-to-predict-protein-function.html" rel="alternate" type="text/html" title="Using a Variational Auto-encoder to predict protein function" /><published>2017-08-14T14:59:35-07:00</published><updated>2017-08-14T14:59:35-07:00</updated><id>http://localhost:4000/jekyll/update/2017/08/14/Using-a-Variational-Autoencoder-to-predict-protein-function</id><content type="html" xml:base="http://localhost:4000/jekyll/update/2017/08/14/Using-a-Variational-Autoencoder-to-predict-protein-function.html">&lt;script type=&quot;text/x-mathjax-config&quot;&gt;
         MathJax.Hub.Config({
             tex2jax: {
               skipTags: ['script', 'noscript', 'style', 'textarea', 'pre']
@@ -15,7 +15,11 @@
 
 &lt;/script&gt;
 
-&lt;script type=&quot;text/javascript&quot; src=&quot;http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML&quot;&gt;&lt;/script&gt;
+&lt;script type=&quot;text/javascript&quot; src=&quot;https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML&quot;&gt;&lt;/script&gt;
+
+&lt;script type=&quot;text/javascript&quot; charset=&quot;utf-8&quot; src=&quot;https://vincenttam.github.io/javascripts/MathJaxLocal.js&quot;&gt;&lt;/script&gt;
+
+&lt;p&gt;&lt;strong&gt;NEWS&lt;/strong&gt;: I’m presenting this work at &lt;a href=&quot;https://mlcb.github.io/&quot;&gt;NIPS MLCB workshop&lt;/a&gt; (see schedule), come talk to me if you are interested.&lt;/p&gt;
 
 &lt;p&gt;In this post I report an application of a Variational Auto-Encoder to predict the effects of mutations on protein function.  This post can serve as an “open notebook” for interested machine learning researchers to suggest improvements. If you think you have good ideas upon reading this, do not hesitate to contact me (you can find my contact information at the footer of this page).&lt;/p&gt;
 
@@ -49,7 +53,7 @@
 
 &lt;h2 id=&quot;results&quot;&gt;Results&lt;/h2&gt;
 
-&lt;p&gt;I directly use the alignment data that accompanies Hopf, Ingraham, et al’s recent paper in Nature biotechnology and show that a simple VAE can perform closely to the performance of their model (in some cases with fewer parameters) in the single mutation and double mutation case. This method however should be seen as work in progress, as the VAE does not outperform the Potts model approach. The full workflow can be accessed in &lt;a href=&quot;&quot;&gt;this notebook&lt;/a&gt;. I highlight general results in this blog post.&lt;/p&gt;
+&lt;p&gt;I directly use the alignment data that accompanies Hopf, Ingraham, et al’s recent paper in Nature biotechnology and show that a simple VAE can perform closely to the performance of their model (in some cases with fewer parameters) in the single mutation and double mutation case. This method however should be seen as work in progress, as the VAE does not outperform the Potts model approach. The full workflow can be accessed in &lt;a href=&quot;https://github.com/samsinai/VAE_protein_function/blob/master/VAE_for_protein_function_prediction.ipynb&quot;&gt;this notebook&lt;/a&gt;. I highlight general results in this blog post.&lt;/p&gt;
 
 &lt;p&gt;Before proceeding, I’d like to clarify two bits of terminology. First, in the entire workflow, we have one sequence that anchors our analysis. We run the alignment against that sequence (where we call it reference), and then we look at single, or double mutants of that sequence (these often don’t exists in the alignment, but we have experimental data for their function). In that context, I refer to the reference sequence as the “wildtype”. Second, fitness is a vague biological term. For our purposes, since what is being measured in each dataset may not be exactly the same thing, it is convenient to refer to it as fitness. As our interest is in relative performance (on whatever metric) between mutants, this is not unreasonable.&lt;/p&gt;
 
@@ -239,4 +243,4 @@ td{
 
 &lt;p&gt;[4]: Melamed, Daniel, et al. “Deep mutational scanning of an RRM domain of the Saccharomyces cerevisiae poly (A)-binding protein.” Rna 19.11 (2013): 1537-1551.&lt;/p&gt;
 
-&lt;p&gt;[5]: Ingraham, John, and Debora Marks. “Variational Inference for Sparse and Undirected Models.” ICML 2017&lt;/p&gt;</content><author><name>This work was done in collaboration with Eric Kelsic. I'm also thankful to Pierce Odgen, Surojit Biswas, Gleb Kuznetsov, and Jeffery Gerold for helpful comments.</name></author><summary type="html"></summary></entry></feed>
+&lt;p&gt;[5]: Ingraham, John, and Debora Marks. “Variational Inference for Sparse and Undirected Models.” ICML 2017&lt;/p&gt;</content><author><name>This work was done in collaboration with Eric Kelsic. I'm also thankful to Pierce Ogden, Surojit Biswas, Gleb Kuznetsov, and Jeffery Gerold for helpful comments.</name></author><summary type="html"></summary></entry></feed>
