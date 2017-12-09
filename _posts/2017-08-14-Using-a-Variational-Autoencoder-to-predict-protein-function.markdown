@@ -30,7 +30,8 @@ categories: jekyll update
   src="https://vincenttam.github.io/javascripts/MathJaxLocal.js"></script>
 
 
-**NEWS**: I'm presenting this work at [NIPS MLCB workshop](https://mlcb.github.io/) (see schedule), come talk to me if you are interested.  
+**NEWS**: I'm presenting this work at [NIPS MLCB workshop](https://mlcb.github.io/) (see schedule), come talk to me if you are interested. See the [extended abstract]({{ site.url }}/assets/VAE_protein_Sinai_Kelsic_Church_Nowak_2017.pdf).
+ 
 
 In this post I report an application of a Variational Auto-Encoder to predict the effects of mutations on protein function.  This post can serve as an "open notebook" for interested machine learning researchers to suggest improvements. If you think you have good ideas upon reading this, do not hesitate to contact me (you can find my contact information at the footer of this page). 
 
