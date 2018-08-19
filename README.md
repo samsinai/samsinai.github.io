@@ -1,3 +1,3 @@
 # samsinai.github.io
 
-[Blog](samsinai.github.io) on my scientific work.
+[Blog](https://samsinai.github.io) on my scientific work.
