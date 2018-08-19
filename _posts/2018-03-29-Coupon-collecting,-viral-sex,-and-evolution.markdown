@@ -44,7 +44,7 @@ Letting $$q=1-p$$, the answer is expressed as
 $$E[T]\sum_{i=1}^n {n \choose i}\frac{(-1)^{i}}{1-q^{-i}} \approx log_q (n)$$
 
 
-With a little effort one can see that if $$p > 1/n$$ , it will take less time to collect the coupons as compared to the “once a day” routine. 
+With a little effort one can see that if $$p > 1/n$$. This is quite fast. It will take much less time to collect the coupons as compared to the “once a day” routine. 
 
 This is well known in the CS community (where it's used for radix sort and skip lists [1,2]) and in fact some famous geneticists [2] wrote a paper about how it relates to evolutionary search processes on simple fitness ladnscapes. 
 
