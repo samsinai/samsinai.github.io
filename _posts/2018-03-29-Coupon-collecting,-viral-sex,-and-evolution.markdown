@@ -37,11 +37,11 @@ A well known problem in probability is the so called [“ coupon collector’s�
 
 $$E(T)= n. H_n \approx n \log n $$
 
-Here $$H_n$$  is the nth [Harmonic number](https://en.wikipedia.org/wiki/Harmonic_number). Now consider the following twist, what if, you were allowed to pick up more than one coupon per day, each with independent probability p. Let’s call this variant the “Album collector’s problem”.  Each day you collect an album with some coupons in it, and add those that are new to your collection. How many days would it take for you to pick up all of the coupons? 
+Here E(T) is the expected time to success and $$H_n$$  is the nth [Harmonic number](https://en.wikipedia.org/wiki/Harmonic_number). Now consider the following twist, what if, you were allowed to pick up more than one coupon per day, each with independent probability p. Let’s call this variant the “Album collector’s problem”.  Each day you collect an album with some coupons in it, and add those that are new to your collection. How many days would it take for you to pick up all of the coupons? 
 
 Letting $$q=1-p$$, the answer is expressed as  
 
-$$E[T]\sum_{i=1}^n {n \choose i}\frac{(-1)^{i}}{1-q^{-i}} \approx log_q (n)$$
+$$E(T)=\sum_{i=1}^n {n \choose i}\frac{(-1)^{i}}{1-q^{-i}} \approx log_q (n)$$
 
 
 With a little effort one can see that if $$p > 1/n$$. This is quite fast. It will take much less time to collect the coupons as compared to the “once a day” routine. 
@@ -50,7 +50,7 @@ This is well known in the CS community (where it's used for radix sort and skip 
 
 In our recent work, we add an additional twist. What if, every night, there was a possibility that a "friend" would steal your album with everything you collected so far?
 
-If this probability $$\delta$$ was very high, e.g. it was certain ($$\delta=1$$) that you lost everything every night, in order to have a full album you need exponentially many days to collect all coupons at once. This is because an independent sampling of coupons gives a $$(1/p)^n$$ chance that you will hit all coupons together. But if the friends stealing habits were more sporadic, you might not be in a disastrous shape. 
+If this probability $$\delta$$ was very high, e.g. it was certain ($$\delta=1$$) that you lost everything every night, in order to have a full album you need exponentially many days to collect all coupons at once. This is because an independent sampling of coupons gives a $$p^n$$ chance that you will hit all coupons together. But if the friends stealing habits were more sporadic, you might not be in a disastrous shape. 
 
 Given p and $$\delta$$,we compute the expression for this case exactly (see the article for the details). A harder task is to be able to compare this formula with the best case scenario that you never lose your album ($$\delta=0$$), and the worst case scenario that you lose everything every night.
 
@@ -74,9 +74,9 @@ There are three reasons I find this line of investingation fascinating.
 
 For a less speculative, more detailed treatment of these ideas, read the [main paper](https://arxiv.org/abs/1612.00825). Comments, ideas to extend our work, and feedback is welcome. 
 
-## Note
+## Note on the applicability of the model
 
-1. Artem Kaznatcheev has written a great blog post on this work as well, with a slightly different lens, check it out [here](https://egtheory.wordpress.com/2016/12/18/fusion-and-sex/). 
+1. Artem Kaznatcheev has written a great blog post on this work as well, with a slightly different lens, check it out [here](https://egtheory.wordpress.com/2016/12/18/fusion-and-sex/). In particular, he points out that the benefits of sex, in the way we describe it, are compromised if there is a strict pairing between division/death events and merging events (namely, e.g. you have to split every time you merge). This is not necessary in protocells and viruses, but certainly relevant in other scenarios. (I will amend more notes here on applicability limitations when I have the chance). 
 
 ## References
 
