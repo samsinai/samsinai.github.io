@@ -37,7 +37,7 @@ A well known problem in probability is the so called [“ coupon collector’s�
 
 $$E(T)= n. H_n \approx n \log n $$
 
-Here E(T) is the expected time to success and $$H_n$$  is the nth [Harmonic number](https://en.wikipedia.org/wiki/Harmonic_number). Now consider the following twist, what if, you were allowed to pick up more than one coupon per day, each with independent probability p. Let’s call this variant the “Album collector’s problem”.  Each day you collect an album with some coupons in it, and add those that are new to your collection. How many days would it take for you to pick up all of the coupons? 
+Here $$E(T)$$ is the expected time to success and $$H_n$$  is the nth [Harmonic number](https://en.wikipedia.org/wiki/Harmonic_number). Now consider the following twist, what if, you were allowed to pick up more than one coupon per day, each with independent probability p. Let’s call this variant the “Album collector’s problem”.  Each day you collect an album with some coupons in it, and add those that are new to your collection. How many days would it take for you to pick up all of the coupons? 
 
 Letting $$q=1-p$$, the answer is expressed as  
 
@@ -74,7 +74,7 @@ There are three reasons I find this line of investingation fascinating.
 
 For a less speculative, more detailed treatment of these ideas, read the [main paper](https://arxiv.org/abs/1612.00825). Comments, ideas to extend our work, and feedback is welcome. 
 
-## Note on the applicability of the model
+### Note on the applicability of the model
 
 1. Artem Kaznatcheev has written a great blog post on this work as well, with a slightly different lens, check it out [here](https://egtheory.wordpress.com/2016/12/18/fusion-and-sex/). In particular, he points out that the benefits of sex, in the way we describe it, are compromised if there is a strict pairing between division/death events and merging events (namely, e.g. you have to split every time you merge). This is not necessary in protocells and viruses, but certainly relevant in other scenarios. (I will amend more notes here on applicability limitations when I have the chance). 
 
