@@ -6,9 +6,13 @@ I'm a co-founder [Dyno Therapeutics](http://www.dynotx.com) where I lead the mac
 
 ## Selected Publications
 
+[Comprehensive AAV capsid fitness landscape reveals a viral gene and enables machine-guided design](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7197022/) - Pierce Ogden\*, Eric Kelsic\*, Sam Sinai, George M Church, 2019 
 
 
+*A current list available on [Google Scholar](https://scholar.google.com/citations?user=4k0EcsIAAAAJ&hl=en)*
 ## Blog posts
+
+
 
 
 

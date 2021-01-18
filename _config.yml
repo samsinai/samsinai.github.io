@@ -1,3 +1,4 @@
 theme: jekyll-theme-minimal
-title: [Sam Sinai]
-logo: [images/me.jpg]
+title: Sam Sinai
+logo: ./images/me.jpg
+
