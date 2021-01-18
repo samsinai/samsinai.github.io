@@ -5,7 +5,8 @@ I'm a co-founder at [Dyno Therapeutics](http://www.dynotx.com) where I lead the 
 ## Selected Publications
 
 [AdaLead: A simple and robust adaptive greedy search algorithm for sequence design](https://arxiv.org/abs/2010.02141) - Sam Sinai\*, Richard Wang\*, Alexander Whatley\*, Stewart Slocum, Elina Locane, Eric Kelsic. 2020
-*Design your own algorithms in this sandbox*: https://github.com/samsinai/FLEXS
+
+*Design your own algorithms with this sandbox*: https://github.com/samsinai/FLEXS
 
 [Comprehensive AAV capsid fitness landscape reveals a viral gene and enables machine-guided design](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7197022/) - Pierce Ogden\*, Eric Kelsic\*, Sam Sinai, and George M Church. 2019 
 
@@ -29,7 +30,7 @@ I'm a co-founder at [Dyno Therapeutics](http://www.dynotx.com) where I lead the 
 
 *Public communication*: [My science blog on Quora](https://www.quora.com/q/darwinsvr). 
 
-Some previous blogs explaining my work:
+Some older blog posts explaining my work:
 - [Coupon collecting, viral sex, and evolution](_posts/2018-03-29-Coupon-collecting,-viral-sex,-and-evolution.markdown). 2018
 
 - [Using a Variational Auto-encoder to predict protein function](_posts/2017-08-14-Using-a-Variational-Autoencoder-to-predict-protein-function.markdown). 2017
