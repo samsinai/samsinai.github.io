@@ -1,6 +1,6 @@
 
 ## About
-I'm a co-founder at [Dyno Therapeutics](http://www.dynotx.com) where I lead the machine learning team. From 2014 to 2019, I was a PhD student at Harvard. During this time, I also closely worked with, and was mentored by, [Eric Kelsic](https://www.linkedin.com/in/kelsic). I built machine learning and [sampling algorithms](https://arxiv.org/abs/2010.10614) for efficient protein design.  I'm also interested in using these engineering tools to understand and model fitness landscapes. Early in my PhD studies, I was focused on theoretical aspects of origins of life. I'm fascinated by organisms at the [boundary of living and non-living](https://www.forbes.com/sites/quora/2016/10/10/what-did-the-earliest-life-on-earth-look-like/?sh=4320acea6f26). I have previously studied computer science with emphasis on computational biology and A.I. at MIT. 
+I'm a co-founder at [Dyno Therapeutics](http://www.dynotx.com) where I lead the machine learning team. From 2014 to 2019, I was a PhD student at Harvard. During this time, I closely worked with, and was mentored by [Eric Kelsic](https://www.linkedin.com/in/kelsic) in the lab of [George Church](http://arep.med.harvard.edu/). I built machine learning and [sampling algorithms](https://arxiv.org/abs/2010.10614) for efficient protein design.  I'm also interested in using these engineering tools to understand and model fitness landscapes. Early in my PhD studies, I was focused on theoretical aspects of origins of life. I'm fascinated by organisms at the [boundary of living and non-living](https://www.forbes.com/sites/quora/2016/10/10/what-did-the-earliest-life-on-earth-look-like/?sh=4320acea6f26). I have previously studied computer science with emphasis on computational biology and A.I. at MIT. I immigrated from Iran, for which I had to [drop out of medical school](https://qz.com/343467/why-i-became-a-computer-scientist-instead-of-a-doctor/).
 
 ## Selected Publications
 
@@ -14,7 +14,7 @@ I'm a co-founder at [Dyno Therapeutics](http://www.dynotx.com) where I lead the 
 
 ## Selected Talks
 
-[Machine-guided capsid engineering for gene therapy](https://www.youtube.com/watch?v=QLURMsm72cE) with Eric Kelsic at the [Broad Models, Inference, and Algorithms Seminar](https://www.broadinstitute.org/talks/spring-2021/mia), 2020
+[Machine-guided capsid engineering for gene therapy](https://www.youtube.com/watch?v=QLURMsm72cE) with Eric Kelsic at the Broad MIA [Seminar](https://www.broadinstitute.org/talks/spring-2021/mia), 2020
 
 **Massively Parallel Deep Diversification of AAV Capsid Proteins by Machine Learning** - Drew Bryant\*, Ali Bashir\*, Sam Sinai\*, Nina Jain, Pierce Ogden, Patrick Riley, George Church^, Lucy Colwell^, Eric Kelsic^, ASGCT 2020
 
@@ -22,9 +22,9 @@ I'm a co-founder at [Dyno Therapeutics](http://www.dynotx.com) where I lead the 
 
 ## Blog
 
-[Coupon collecting, viral sex, and evolution](_posts/2018-03-29-Coupon-collecting,-viral-sex,-and-evolution.markdown)- 2018
+[Coupon collecting, viral sex, and evolution](_posts/2018-03-29-Coupon-collecting,-viral-sex,-and-evolution.markdown). 2018
 
-[Using a Variational Auto-encoder to predict protein function](_posts/2017-08-14-Using-a-Variational-Autoencoder-to-predict-protein-function.markdown) - 2017
+[Using a Variational Auto-encoder to predict protein function](_posts/2017-08-14-Using-a-Variational-Autoencoder-to-predict-protein-function.markdown). 2017
 
 ## Scientific service
 
