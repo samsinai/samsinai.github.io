@@ -24,7 +24,7 @@ github_username:  samsinai
 
 # Build settings
 markdown: kramdown
-theme: minima
+theme: jekyll-theme-minimal
 gems:
   - jekyll-feed
 include:
