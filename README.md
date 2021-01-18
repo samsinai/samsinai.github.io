@@ -1,2 +1,1 @@
-# samsinai.github.io
-My personal website.
+# Sam Sinai
