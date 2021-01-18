@@ -4,11 +4,11 @@ I'm a co-founder at [Dyno Therapeutics](http://www.dynotx.com) where I lead the 
 
 ## Selected Publications
 
-[AdaLead: A simple and robust adaptive greedy search algorithm for sequence design](https://arxiv.org/abs/2010.02141) - Sam Sinai\*, Richard Wang\*, Alexander Whatley\*, Stewart Slocum, Elina Locane, Eric Kelsic. 2020, *Code:[github.com/samsinai/FLEXS](https://github.com/samsinai/FLEXS)*
+[AdaLead: A simple and robust adaptive greedy search algorithm for sequence design](https://arxiv.org/abs/2010.02141) - Sam Sinai\*, Richard Wang\*, Alexander Whatley\*, Stewart Slocum, Elina Locane, Eric Kelsic. 2020. *[Code](https://github.com/samsinai/FLEXS)*.
 
-[Comprehensive AAV capsid fitness landscape reveals a viral gene and enables machine-guided design](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7197022/) - Pierce Ogden\*, Eric Kelsic\*, Sam Sinai, and George M Church. 2019 
+[Comprehensive AAV capsid fitness landscape reveals a viral gene and enables machine-guided design](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7197022/) - Pierce Ogden\*, Eric Kelsic\*, Sam Sinai, and George M Church. 2019. *[Code](https://github.com/churchlab/AAV_fitness_landscape)*.
 
-[Variational auto-encoding of protein sequences](https://arxiv.org/pdf/1712.03346.pdf) - Sam Sinai, Eric Kelsic^, George Church^, and Martin Nowak^. 2017, *Code:[github.com/samsinai/VAE_protein_function](https://github.com/samsinai/VAE_protein_function)*
+[Variational auto-encoding of protein sequences](https://arxiv.org/pdf/1712.03346.pdf) - Sam Sinai, Eric Kelsic^, George Church^, and Martin Nowak^. 2017. *[Code](https://github.com/samsinai/VAE_protein_function)*.
 
 *A complete list is available on [Google Scholar](https://scholar.google.com/citations?user=4k0EcsIAAAAJ&hl=en)*. 
 
@@ -34,7 +34,7 @@ I'm a co-founder at [Dyno Therapeutics](http://www.dynotx.com) where I lead the 
 
 - [What are some lesser known facts about Stephen Hawking?](https://qr.ae/pNmkdP)
 
-Older blog posts explaining my work:
+Blog posts explaining my work (pardon some formatting issues):
 - [Coupon collecting, viral sex, and evolution](_posts/2018-03-29-Coupon-collecting,-viral-sex,-and-evolution.markdown). 2018
 
 - [Using a Variational Auto-encoder to predict protein function](_posts/2017-08-14-Using-a-Variational-Autoencoder-to-predict-protein-function.markdown). 2017
