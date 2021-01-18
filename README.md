@@ -1,10 +1,10 @@
 
 ## About
-I'm a co-founder at [Dyno Therapeutics](http://www.dynotx.com) where I lead the machine learning team. From 2014 to 2019, I was a PhD student at Harvard. During this time, I also closely worked with, and was mentored by, [Eric Kelsic](https://www.linkedin.com/in/kelsic). During my PhD, and now at Dyno, I built machine learning and [sampling algorithms](https://arxiv.org/abs/2010.10614) for efficient protein design.  I'm also interested in using these engineering tools to understand and model fitness landscapes. Early in my PhD studies, I was focused on theoretical aspects of origins of life. I'm fascinated by organisms at the [boundary of living and non-living](https://www.forbes.com/sites/quora/2016/10/10/what-did-the-earliest-life-on-earth-look-like/?sh=4320acea6f26). I have previously studied computer science with emphasis on computational biology and A.I. at MIT. 
+I'm a co-founder at [Dyno Therapeutics](http://www.dynotx.com) where I lead the machine learning team. From 2014 to 2019, I was a PhD student at Harvard. During this time, I also closely worked with, and was mentored by, [Eric Kelsic](https://www.linkedin.com/in/kelsic). I built machine learning and [sampling algorithms](https://arxiv.org/abs/2010.10614) for efficient protein design.  I'm also interested in using these engineering tools to understand and model fitness landscapes. Early in my PhD studies, I was focused on theoretical aspects of origins of life. I'm fascinated by organisms at the [boundary of living and non-living](https://www.forbes.com/sites/quora/2016/10/10/what-did-the-earliest-life-on-earth-look-like/?sh=4320acea6f26). I have previously studied computer science with emphasis on computational biology and A.I. at MIT. 
 
 ## Selected Publications
 
-[AdaLead: A simple and robust adaptive greedy search algorithm for sequence design](https://arxiv.org/abs/2010.02141) Sam Sinai\*, Richard Wang\*, Alexander Whatley\*, Stewart Slocum, Elina Locane, Eric Kelsic. 2020
+[AdaLead: A simple and robust adaptive greedy search algorithm for sequence design](https://arxiv.org/abs/2010.02141) - Sam Sinai\*, Richard Wang\*, Alexander Whatley\*, Stewart Slocum, Elina Locane, Eric Kelsic. 2020
 
 [Comprehensive AAV capsid fitness landscape reveals a viral gene and enables machine-guided design](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7197022/) - Pierce Ogden\*, Eric Kelsic\*, Sam Sinai, and George M Church. 2019 
 
