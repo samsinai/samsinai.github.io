@@ -10,7 +10,7 @@ I'm a co-founder at [Dyno Therapeutics](http://www.dynotx.com) where I lead the 
 
 [Comprehensive AAV capsid fitness landscape reveals a viral gene and enables machine-guided design](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7197022/) - Pierce Ogden\*, Eric Kelsic\*, Sam Sinai, and George M Church. 2019 
 
-[Variational auto-encoding of protein sequences](https://arxiv.org/pdf/1712.03346.pdf) - Sam Sinai, Eric Kelsic, George Church, and Martin Nowak. 2017
+[Variational auto-encoding of protein sequences](https://arxiv.org/pdf/1712.03346.pdf) - Sam Sinai, Eric Kelsic^, George Church^, and Martin Nowak^. 2017
 
 *A complete list is available on [Google Scholar](https://scholar.google.com/citations?user=4k0EcsIAAAAJ&hl=en)*. 
 
@@ -20,7 +20,7 @@ I'm a co-founder at [Dyno Therapeutics](http://www.dynotx.com) where I lead the 
 
 **Massively Parallel Deep Diversification of AAV Capsid Proteins by Machine Learning** - Drew Bryant\*, Ali Bashir\*, Sam Sinai\*, Nina Jain, Pierce Ogden, Patrick Riley, George Church^, Lucy Colwell^, Eric Kelsic^, ASGCT 2020
 
-**Machine-Guided Design of AAV Capsid Proteins with Experimentally Augmented Evolutionary Data** - Sam Sinai, Eric Kelsic, Javen Tan, Nina Jain, Pierce Ogden, Martin Nowak, George Church, ASGCT 2019
+**Machine-Guided Design of AAV Capsid Proteins with Experimentally Augmented Evolutionary Data** - Sam Sinai\*, Eric Kelsic\*, Javen Tan, Nina Jain, Pierce Ogden, Martin Nowak^, George Church^, ASGCT 2019
 
 
 
