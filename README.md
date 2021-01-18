@@ -10,7 +10,7 @@ I'm a co-founder at [Dyno Therapeutics](http://www.dynotx.com) where I lead the 
 
 [Variational auto-encoding of protein sequences](https://arxiv.org/pdf/1712.03346.pdf) - Sam Sinai, Eric Kelsic, George Church, and Martin Nowak. 2017
 
-*A complete list available on [Google Scholar](https://scholar.google.com/citations?user=4k0EcsIAAAAJ&hl=en)*
+*A complete list is available on [Google Scholar](https://scholar.google.com/citations?user=4k0EcsIAAAAJ&hl=en)*
 
 ## Selected Talks
 
@@ -20,6 +20,12 @@ I'm a co-founder at [Dyno Therapeutics](http://www.dynotx.com) where I lead the 
 
 **Machine-Guided Design of AAV Capsid Proteins with Experimentally Augmented Evolutionary Data** - Sam Sinai, Eric Kelsic, Javen Tan, Nina Jain, Pierce Ogden, Martin Nowak, George Church, ASGCT 2019
 
+
+## Service
+
+*Reviewer*:  NeuIPS, ICLR, ICML. 
+
+*Public communication*: [My Science blog on Quora](https://www.quora.com/q/darwinsvr). 
 
 
 
