@@ -14,13 +14,13 @@ I'm a co-founder at [Dyno Therapeutics](http://www.dynotx.com) where I lead the 
 
 ## Selected Talks
 
-[Machine-guided capsid engineering for gene therapy](https://www.youtube.com/watch?v=QLURMsm72cE) with Eric Kelsic at the [Broad MIA](https://www.broadinstitute.org/talks/spring-2021/mia), 2020
+[Machine-guided capsid engineering for gene therapy](https://www.youtube.com/watch?v=QLURMsm72cE) with Eric Kelsic at the [Broad Models, Inference, and Algorithms Seminar](https://www.broadinstitute.org/talks/spring-2021/mia), 2020
 
 **Massively Parallel Deep Diversification of AAV Capsid Proteins by Machine Learning** - Drew Bryant\*, Ali Bashir\*, Sam Sinai\*, Nina Jain, Pierce Ogden, Patrick Riley, George Church^, Lucy Colwell^, Eric Kelsic^, ASGCT 2020
 
 **Machine-Guided Design of AAV Capsid Proteins with Experimentally Augmented Evolutionary Data** - Sam Sinai, Eric Kelsic, Javen Tan, Nina Jain, Pierce Ogden, Martin Nowak, George Church, ASGCT 2019
 
-## Blog posts
+## Blog
 
 [Coupon collecting, viral sex, and evolution](_posts/2018-03-29-Coupon-collecting,-viral-sex,-and-evolution.markdown)- 2018
 
