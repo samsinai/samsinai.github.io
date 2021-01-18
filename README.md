@@ -30,6 +30,8 @@ I'm a co-founder at [Dyno Therapeutics](http://www.dynotx.com) where I lead the 
 
 - [Why is water transparent?](https://qr.ae/pNmkdR)
 
+- [What is the most primitive form of life?](https://qr.ae/pNDAxm)
+
 - [What are some lesser known facts about Stephen Hawking?](https://qr.ae/pNmkdP)
 
 Older blog posts explaining my work:
