@@ -24,7 +24,13 @@ I'm a co-founder at [Dyno Therapeutics](http://www.dynotx.com) where I lead the 
 
 *Reviewer*:  NeuIPS, ICLR, ICML. 
 
-*Public communication*: [My science blog on Quora](https://www.quora.com/q/darwinsvr). 
+*Science communication*: [My science blog on Quora](https://www.quora.com/q/darwinsvr). 
+
+- [What makes ML in computational biology especially difficult?](https://qr.ae/Tcnowc)
+
+- [Why is water transparent?](https://qr.ae/pNmkdR)
+
+- [What are some lesser known facts about Stephen Hawking?](https://qr.ae/pNmkdP)
 
 Older blog posts explaining my work:
 - [Coupon collecting, viral sex, and evolution](_posts/2018-03-29-Coupon-collecting,-viral-sex,-and-evolution.markdown). 2018
