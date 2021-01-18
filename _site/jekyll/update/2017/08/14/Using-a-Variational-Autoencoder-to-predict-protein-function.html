@@ -1,85 +1,58 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html lang="en-US">
   <head>
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <title>Using a Variational Auto-encoder to predict protein function</title>
-  <meta name="description" content="">
+<!-- Begin Jekyll SEO tag v2.6.1 -->
+<title>Using a Variational Auto-encoder to predict protein function | Sam Sinai</title>
+<meta name="generator" content="Jekyll v3.9.0" />
+<meta property="og:title" content="Using a Variational Auto-encoder to predict protein function" />
+<meta name="author" content="This work was done in collaboration with Eric Kelsic. I'm also thankful to Pierce Ogden, Surojit Biswas, Gleb Kuznetsov, and Jeffery Gerold for helpful comments." />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="My work/thoughts related to computational biology and machine learning." />
+<meta property="og:description" content="My work/thoughts related to computational biology and machine learning." />
+<link rel="canonical" href="http://localhost:4000/jekyll/update/2017/08/14/Using-a-Variational-Autoencoder-to-predict-protein-function.html" />
+<meta property="og:url" content="http://localhost:4000/jekyll/update/2017/08/14/Using-a-Variational-Autoencoder-to-predict-protein-function.html" />
+<meta property="og:site_name" content="Sam Sinai" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2017-08-14T17:59:35-04:00" />
+<script type="application/ld+json">
+{"description":"My work/thoughts related to computational biology and machine learning.","author":{"@type":"Person","name":"This work was done in collaboration with Eric Kelsic. I'm also thankful to Pierce Ogden, Surojit Biswas, Gleb Kuznetsov, and Jeffery Gerold for helpful comments."},"@type":"BlogPosting","url":"http://localhost:4000/jekyll/update/2017/08/14/Using-a-Variational-Autoencoder-to-predict-protein-function.html","headline":"Using a Variational Auto-encoder to predict protein function","dateModified":"2017-08-14T17:59:35-04:00","datePublished":"2017-08-14T17:59:35-04:00","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/jekyll/update/2017/08/14/Using-a-Variational-Autoencoder-to-predict-protein-function.html"},"@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
 
-  <link rel="stylesheet" href="/assets/main.css">
-  <link rel="canonical" href="http://localhost:4000/jekyll/update/2017/08/14/Using-a-Variational-Autoencoder-to-predict-protein-function.html">
-  <link rel="alternate" type="application/rss+xml" title="Sam Sinai&#39;s blog" href="/feed.xml">
-  
-  
-</head>
-
-
+    <link rel="stylesheet" href="/assets/css/style.css?v=c2ac0857cf577ec493337d23c373e3889768e1b0">
+    <!--[if lt IE 9]>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js"></script>
+    <![endif]-->
+  </head>
   <body>
-
-    <header class="site-header" role="banner">
-
-  <div class="wrapper">
-    
-    
-    <a class="site-title" href="/">Sam Sinai&#39;s blog</a>
-  
-    
-      <nav class="site-nav">
-        <input type="checkbox" id="nav-trigger" class="nav-trigger" />
-        <label for="nav-trigger">
-          <span class="menu-icon">
-            <svg viewBox="0 0 18 15" width="18px" height="15px">
-              <path fill="#424242" d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.031C17.335,0,18,0.665,18,1.484L18,1.484z"/>
-              <path fill="#424242" d="M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0c0-0.82,0.665-1.484,1.484-1.484 h15.031C17.335,6.031,18,6.696,18,7.516L18,7.516z"/>
-              <path fill="#424242" d="M18,13.516C18,14.335,17.335,15,16.516,15H1.484C0.665,15,0,14.335,0,13.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.031C17.335,12.031,18,12.696,18,13.516L18,13.516z"/>
-            </svg>
-          </span>
-        </label>
-
-        <div class="trigger">
-          
-            
-            
-            <a class="page-link" href="/about/">About</a>
-            
-          
-            
-            
-          
-            
-            
-          
-            
-            
-          
-        </div>
-      </nav>
-    
-  </div>
-</header>
-
-
-    <main class="page-content" aria-label="Content">
-      <div class="wrapper">
-        <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
-
-  <header class="post-header">
-    <h1 class="post-title" itemprop="name headline">Using a Variational Auto-encoder to predict protein function</h1>
-    <p class="post-meta">
-      <time datetime="2017-08-14T17:59:35-04:00" itemprop="datePublished">
+    <div class="wrapper">
+      <header>
+        <h1><a href="http://localhost:4000/">Sam Sinai</a></h1>
         
-        Aug 14, 2017
-      </time>
-      
-        • <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span itemprop="name">This work was done in collaboration with Eric Kelsic. I'm also thankful to Pierce Ogden, Surojit Biswas, Gleb Kuznetsov, and Jeffery Gerold for helpful comments.</span></span>
-      </p>
-  </header>
+        
 
-  <div class="post-content" itemprop="articleBody">
-    <script type="text/x-mathjax-config">
+        <p>My work/thoughts related to computational biology and machine learning. 
+</p>
+
+        
+        <p class="view"><a href="https://github.com/samsinai/samsinai.github.io">View the Project on GitHub <small>samsinai/samsinai.github.io</small></a></p>
+        
+
+        
+
+        
+      </header>
+      <section>
+
+      <small>14 August 2017</small>
+<h1>Using a Variational Auto-encoder to predict protein function</h1>
+
+<p class="view">by This work was done in collaboration with Eric Kelsic. I'm also thankful to Pierce Ogden, Surojit Biswas, Gleb Kuznetsov, and Jeffery Gerold for helpful comments.</p>
+
+<script type="text/x-mathjax-config">
         MathJax.Hub.Config({
             tex2jax: {
               skipTags: ['script', 'noscript', 'style', 'textarea', 'pre']
@@ -106,16 +79,16 @@
 <h2 id="big-picture">Big Picture</h2>
 <p>Proteins are responsible for the most diverse set of functions in biology. What proteins do is largely determined by their sequence (and conditions under which they fold). The ability to predict whether a change in sequence will affect their function is extremely valuable. There is a clear engineering/clinical incentive to modify protein function. For instance, my collaborators synthesize massive libraries of AAV variants, hoping to find effective viral vectors for gene therapy.</p>
 
-<p>My interest in this topic, as a computational biologist with interest in origin of life (and evolution), is driven more directly by basic science. Imagine you have a protein of size <script type="math/tex">L</script>. The standard <script type="math/tex">20</script> amino-acid alphabet that could appear in any from position <script type="math/tex">1</script> to <script type="math/tex">L</script>. This means that there are <script type="math/tex">20^L</script> possible sequences of size <script type="math/tex">L</script>.  A key question in the field of origin of life, as well as evolutionary theory is this:</p>
+<p>My interest in this topic, as a computational biologist with interest in origin of life (and evolution), is driven more directly by basic science. Imagine you have a protein of size \(L\). The standard \(20\) amino-acid alphabet that could appear in any from position \(1\) to \(L\). This means that there are \(20^L\) possible sequences of size \(L\).  A key question in the field of origin of life, as well as evolutionary theory is this:</p>
 
 <blockquote>
 
- 	 <strong>How many of these <script type="math/tex">20^L</script>  sequences result in a (specific) function?</strong> 
+ 	 <strong>How many of these \(20^L\)  sequences result in a (specific) function?</strong> 
 </blockquote>
 
 <p>In other words, how dense is the sequence space in functional proteins? This space grows exponentially with sequence size, hence it is hopeless to sample it thoroughly even by computational means, let alone experiments. But navigating it in search for a function may also not be as bad as it initially seems, in particular, if functions are concentrated in clusters of (nearby) sequences. We can start from a known sequence that does have that function, and explore its vicinity.</p>
 
-<p>For the readers that are not very familiar with biology, maybe an analogy could be helpful. The English alphabet has 26+1 (for space) letters. For a sentence of length <script type="math/tex">L</script>, there are <script type="math/tex">27^L</script> possible arrangments of these letters, most of them will have no meaning in English. However, a lot of sentences that do have a meaning are fairly close to each other. Hence, starting from a set of meaningful sentences, we can hope to train a model to reproduce them with some novelty. The problem for the protein engineer is significantly harder, because checking whether your algorithm produced a meaningful sequence requires you to actually make the protein (and deploy it in the right biological context) to evaluate its function. With sentences, verification is significantly easier and cheaper (a human can read and verify it). So the goal is to find a computational method where we can predict whether a sequence is functional (bio-active).</p>
+<p>For the readers that are not very familiar with biology, maybe an analogy could be helpful. The English alphabet has 26+1 (for space) letters. For a sentence of length \(L\), there are \(27^L\) possible arrangments of these letters, most of them will have no meaning in English. However, a lot of sentences that do have a meaning are fairly close to each other. Hence, starting from a set of meaningful sentences, we can hope to train a model to reproduce them with some novelty. The problem for the protein engineer is significantly harder, because checking whether your algorithm produced a meaningful sequence requires you to actually make the protein (and deploy it in the right biological context) to evaluate its function. With sentences, verification is significantly easier and cheaper (a human can read and verify it). So the goal is to find a computational method where we can predict whether a sequence is functional (bio-active).</p>
 
 <p>In this blog post, I mention one approach I’ve recently tried with some success to predict protein functionality. I train a Variational Auto-encoder[1] on protein sequences that are close to each other (from an evolutionary perspective) and using that I try to predict how much the function of the protein is affected by changing one or two letters in a sequence. This is of course a much simpler problem than the big picture described above (but a first natural step to it). However, even when the problem is this much simpler, predicting protein function using current methods still has much room for improvement.</p>
 
@@ -146,34 +119,34 @@
 <span class="n">intermediate_dim</span> <span class="o">=</span> <span class="mi">250</span>
 <span class="n">nb_epoch</span> <span class="o">=</span> <span class="mi">10</span>
 <span class="n">epsilon_std</span> <span class="o">=</span> <span class="mf">1.0</span>
-<span class="c">#np.random.seed(1337)  # for reproducibility</span>
-
+<span class="c1">#np.random.seed(1337)  # for reproducibility
+</span>
 <span class="k">def</span> <span class="nf">sampling</span><span class="p">(</span><span class="n">args</span><span class="p">):</span>
     <span class="n">z_mean</span><span class="p">,</span> <span class="n">z_log_var</span> <span class="o">=</span> <span class="n">args</span>
-    <span class="n">epsilon</span> <span class="o">=</span> <span class="n">K</span><span class="o">.</span><span class="n">random_normal</span><span class="p">(</span><span class="n">shape</span><span class="o">=</span><span class="p">(</span><span class="n">batch_size</span><span class="p">,</span> <span class="n">latent_dim</span><span class="p">),</span> <span class="n">mean</span><span class="o">=</span><span class="mf">0.</span><span class="p">,</span>
+    <span class="n">epsilon</span> <span class="o">=</span> <span class="n">K</span><span class="p">.</span><span class="n">random_normal</span><span class="p">(</span><span class="n">shape</span><span class="o">=</span><span class="p">(</span><span class="n">batch_size</span><span class="p">,</span> <span class="n">latent_dim</span><span class="p">),</span> <span class="n">mean</span><span class="o">=</span><span class="mf">0.</span><span class="p">,</span>
                               <span class="n">std</span><span class="o">=</span><span class="n">epsilon_std</span><span class="p">)</span>
-    <span class="k">return</span> <span class="n">z_mean</span> <span class="o">+</span> <span class="n">K</span><span class="o">.</span><span class="n">exp</span><span class="p">(</span><span class="n">z_log_var</span> <span class="o">/</span> <span class="mi">2</span><span class="p">)</span> <span class="o">*</span> <span class="n">epsilon</span>
+    <span class="k">return</span> <span class="n">z_mean</span> <span class="o">+</span> <span class="n">K</span><span class="p">.</span><span class="n">exp</span><span class="p">(</span><span class="n">z_log_var</span> <span class="o">/</span> <span class="mi">2</span><span class="p">)</span> <span class="o">*</span> <span class="n">epsilon</span>
 
 <span class="k">def</span> <span class="nf">vae_loss</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">x_decoded_mean</span><span class="p">):</span>
-    <span class="n">xent_loss</span> <span class="o">=</span> <span class="n">original_dim</span> <span class="o">*</span> <span class="n">objectives</span><span class="o">.</span><span class="n">categorical_crossentropy</span><span class="p">(</span><span class="n">x</span><span class="p">,</span>  <span class="n">x_decoded_mean</span><span class="p">)</span>
-    <span class="n">kl_loss</span> <span class="o">=</span> <span class="o">-</span> <span class="mf">0.5</span> <span class="o">*</span> <span class="n">K</span><span class="o">.</span><span class="nb">sum</span><span class="p">(</span><span class="mi">1</span> <span class="o">+</span> <span class="n">z_log_var</span> <span class="o">-</span> <span class="n">K</span><span class="o">.</span><span class="n">square</span><span class="p">(</span><span class="n">z_mean</span><span class="p">)</span> <span class="o">-</span> <span class="n">K</span><span class="o">.</span><span class="n">exp</span><span class="p">(</span><span class="n">z_log_var</span><span class="p">),</span> <span class="n">axis</span><span class="o">=-</span><span class="mi">1</span><span class="p">)</span>
+    <span class="n">xent_loss</span> <span class="o">=</span> <span class="n">original_dim</span> <span class="o">*</span> <span class="n">objectives</span><span class="p">.</span><span class="n">categorical_crossentropy</span><span class="p">(</span><span class="n">x</span><span class="p">,</span>  <span class="n">x_decoded_mean</span><span class="p">)</span>
+    <span class="n">kl_loss</span> <span class="o">=</span> <span class="o">-</span> <span class="mf">0.5</span> <span class="o">*</span> <span class="n">K</span><span class="p">.</span><span class="nb">sum</span><span class="p">(</span><span class="mi">1</span> <span class="o">+</span> <span class="n">z_log_var</span> <span class="o">-</span> <span class="n">K</span><span class="p">.</span><span class="n">square</span><span class="p">(</span><span class="n">z_mean</span><span class="p">)</span> <span class="o">-</span> <span class="n">K</span><span class="p">.</span><span class="n">exp</span><span class="p">(</span><span class="n">z_log_var</span><span class="p">),</span> <span class="n">axis</span><span class="o">=-</span><span class="mi">1</span><span class="p">)</span>
     <span class="k">return</span> <span class="n">xent_loss</span> <span class="o">+</span> <span class="n">kl_loss</span>
 
-<span class="c">#Encoding Layers</span>
-<span class="n">x</span> <span class="o">=</span> <span class="n">Input</span><span class="p">(</span><span class="n">batch_shape</span><span class="o">=</span><span class="p">(</span><span class="n">batch_size</span><span class="p">,</span> <span class="n">original_dim</span><span class="p">))</span>
+<span class="c1">#Encoding Layers
+</span><span class="n">x</span> <span class="o">=</span> <span class="n">Input</span><span class="p">(</span><span class="n">batch_shape</span><span class="o">=</span><span class="p">(</span><span class="n">batch_size</span><span class="p">,</span> <span class="n">original_dim</span><span class="p">))</span>
 <span class="n">h</span> <span class="o">=</span> <span class="n">Dense</span><span class="p">(</span><span class="n">intermediate_dim</span><span class="p">,</span><span class="n">activation</span><span class="o">=</span><span class="s">"elu"</span><span class="p">)(</span><span class="n">x</span><span class="p">)</span>
 <span class="n">h</span><span class="o">=</span> <span class="n">Dropout</span><span class="p">(</span><span class="mf">0.7</span><span class="p">)(</span><span class="n">h</span><span class="p">)</span>
 <span class="n">h</span> <span class="o">=</span> <span class="n">Dense</span><span class="p">(</span><span class="n">intermediate_dim</span><span class="p">,</span> <span class="n">activation</span><span class="o">=</span><span class="s">'elu'</span><span class="p">)(</span><span class="n">h</span><span class="p">)</span>
 <span class="n">h</span><span class="o">=</span><span class="n">BatchNormalization</span><span class="p">(</span><span class="n">mode</span><span class="o">=</span><span class="mi">0</span><span class="p">)(</span><span class="n">h</span><span class="p">)</span>
 <span class="n">h</span> <span class="o">=</span> <span class="n">Dense</span><span class="p">(</span><span class="n">intermediate_dim</span><span class="p">,</span> <span class="n">activation</span><span class="o">=</span><span class="s">'elu'</span><span class="p">)(</span><span class="n">h</span><span class="p">)</span>
 
-<span class="c">#Latent layers</span>
-<span class="n">z_mean</span><span class="o">=</span><span class="n">Dense</span><span class="p">(</span><span class="n">latent_dim</span><span class="p">)(</span><span class="n">h</span><span class="p">)</span>
+<span class="c1">#Latent layers
+</span><span class="n">z_mean</span><span class="o">=</span><span class="n">Dense</span><span class="p">(</span><span class="n">latent_dim</span><span class="p">)(</span><span class="n">h</span><span class="p">)</span>
 <span class="n">z_log_var</span><span class="o">=</span><span class="n">Dense</span><span class="p">(</span><span class="n">latent_dim</span><span class="p">)(</span><span class="n">h</span><span class="p">)</span>
 <span class="n">z</span> <span class="o">=</span> <span class="n">Lambda</span><span class="p">(</span><span class="n">sampling</span><span class="p">,</span> <span class="n">output_shape</span><span class="o">=</span><span class="p">(</span><span class="n">latent_dim</span><span class="p">,))([</span><span class="n">z_mean</span><span class="p">,</span> <span class="n">z_log_var</span><span class="p">])</span>
 
-<span class="c">#Decoding layers </span>
-
+<span class="c1">#Decoding layers 
+</span>
 <span class="n">decoder_1</span><span class="o">=</span> <span class="n">Dense</span><span class="p">(</span><span class="n">intermediate_dim</span><span class="p">,</span> <span class="n">activation</span><span class="o">=</span><span class="s">'elu'</span><span class="p">)</span>
 <span class="n">decoder_2</span><span class="o">=</span><span class="n">Dense</span><span class="p">(</span><span class="n">intermediate_dim</span><span class="p">,</span> <span class="n">activation</span><span class="o">=</span><span class="s">'elu'</span><span class="p">)</span>
 <span class="n">decoder_2d</span><span class="o">=</span><span class="n">Dropout</span><span class="p">(</span><span class="mf">0.7</span><span class="p">)</span>
@@ -183,9 +156,9 @@
 
 <span class="n">vae</span> <span class="o">=</span> <span class="n">Model</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">x_decoded_mean</span><span class="p">)</span>
 
-<span class="c">#Potentially better results, but requires further hyperparameter tuning</span>
-<span class="c">#optimizer=keras.optimizers.SGD(lr=0.005, momentum=0.001, decay=0.0, nesterov=False,clipvalue=0.05)</span>
-<span class="n">vae</span><span class="o">.</span><span class="nb">compile</span><span class="p">(</span><span class="n">optimizer</span><span class="o">=</span><span class="s">"adam"</span><span class="p">,</span> <span class="n">loss</span><span class="o">=</span><span class="n">vae_loss</span><span class="p">,</span><span class="n">metrics</span><span class="o">=</span><span class="p">[</span><span class="s">"categorical_accuracy"</span><span class="p">,</span><span class="s">"fmeasure"</span><span class="p">,</span><span class="s">"top_k_categorical_accuracy"</span><span class="p">])</span></code></pre></figure>
+<span class="c1">#Potentially better results, but requires further hyperparameter tuning
+#optimizer=keras.optimizers.SGD(lr=0.005, momentum=0.001, decay=0.0, nesterov=False,clipvalue=0.05)
+</span><span class="n">vae</span><span class="p">.</span><span class="nb">compile</span><span class="p">(</span><span class="n">optimizer</span><span class="o">=</span><span class="s">"adam"</span><span class="p">,</span> <span class="n">loss</span><span class="o">=</span><span class="n">vae_loss</span><span class="p">,</span><span class="n">metrics</span><span class="o">=</span><span class="p">[</span><span class="s">"categorical_accuracy"</span><span class="p">,</span><span class="s">"fmeasure"</span><span class="p">,</span><span class="s">"top_k_categorical_accuracy"</span><span class="p">])</span></code></pre></figure>
 
 <p>The hyperparameters for this model are manually optimized, but when using the ADAM optimizer, the results are generally not radically affected by reducing one or two layers, adding dropout, or adding more regularization. SGD is significantly more sensitive to these manipulations, but it is also thought to be potentially better at finding state of the art results. I have not managed to beat the results obtained by ADAM when using SGD.</p>
 
@@ -199,7 +172,7 @@
 
 <p><img src="http://localhost:4000/images/doubles_new_reconstruct.png" /></p>
 
-<p>These reconstructions are normalized like a probability weight matrix, where each position column constitutes probabilities for each amino-acid at that location (we denote this matrix as <script type="math/tex">P</script> below).</p>
+<p>These reconstructions are normalized like a probability weight matrix, where each position column constitutes probabilities for each amino-acid at that location (we denote this matrix as \(P\) below).</p>
 
 <p>The most interesting take away (and the reason I tried this) from these reconstructions is what the network has learned about co-dependence of mutations. To see this better, I subtract the the two PWMs and look at their difference below. The update in probability occurs not only in the position where the two sequences differ, but also in places that they are the same. The model is suggesting that maybe an additional mutation (for instance a “rescue”) in those places is now more likely (or less likely) given the mutation observed.</p>
 
@@ -207,17 +180,16 @@
 
 <p>Using these reconstructions, I compute the (log) probability of a sequence as:</p>
 
-<script type="math/tex; mode=display">\mathbb{P}(\sigma)=\log(trace(H^T P))</script>
+\[\mathbb{P}(\sigma)=\log(trace(H^T P))\]
 
-<p>Where <script type="math/tex">H</script> is the one-hot encoding of the sequence of interest, and <script type="math/tex">P</script> is the probability weight matrix generated by feeding the network a sequence. This formula allows me to calculate how probable a sequence is, given a probability weight matrix <script type="math/tex">P</script>. I can compute <script type="math/tex">P</script> in three highly correlated ways (although depending on the dataset, these correlations change). The difference in these approaches is in how to compute <script type="math/tex">P</script> (you can read the details in the notebook). In this notebook, for simplicity, I use <script type="math/tex">P</script> as the reconstruction matrix that is obtained by feeding the network the input <script type="math/tex">H</script>.</p>
+<p>Where \(H\) is the one-hot encoding of the sequence of interest, and \(P\) is the probability weight matrix generated by feeding the network a sequence. This formula allows me to calculate how probable a sequence is, given a probability weight matrix \(P\). I can compute \(P\) in three highly correlated ways (although depending on the dataset, these correlations change). The difference in these approaches is in how to compute \(P\) (you can read the details in the notebook). In this notebook, for simplicity, I use \(P\) as the reconstruction matrix that is obtained by feeding the network the input \(H\).</p>
 
-<p>Once we have computed <script type="math/tex">\mathbb{P}(\sigma_i)</script> for every sequence <script type="math/tex">\sigma_i</script> in our mutant set, we can compare the relative probability of each sequence with the experimentally measured function of the sequence. Below we show a scatter plot of the singles and double mutants for the PABP dataset. 
+<p>Once we have computed \(\mathbb{P}(\sigma_i)\) for every sequence \(\sigma_i\) in our mutant set, we can compare the relative probability of each sequence with the experimentally measured function of the sequence. Below we show a scatter plot of the singles and double mutants for the PABP dataset. 
 <img src="http://localhost:4000/images/combined_single_double.jpeg" /></p>
 
 <p>The red line denotes perfect rank correlation (spearman). The blue dots are the actual predictions vs. the experimental data. I can compare the performance of our model for both single and double mutants with that of Hopf. et al. In the table below, I show the spearman correlations between the experimental data, and that predicted by our method (approach 3), and compare it to the predictions done by the epistatic model (as well as the baseline independent model). I use the <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3851721/">PABP yeast</a> dataset[4] because it has both single and double mutant data.</p>
 
-<p>The results I report here are <strong>without</strong> sequence reweighting. My references correct for oversampling (because MSA generates clusters of sequences), by dividing the weight of each sequence within a neighborhood by the size of its neighborhood.  My experience suggests that while tuning the reweighting parameter <script type="math/tex">\theta</script> does improve the predictions for each dataset, picking a pre-determined <script type="math/tex">\theta</script> such that <script type="math/tex">% <![CDATA[
-0<\theta\leq 0.2 %]]></script> across all datasets doesn’t consistently improve our predictions across datasets and on occasion deteriorates our results. The reader is welcome to use the reweighting logic provided in the notebook to attempt this by themselves.</p>
+<p>The results I report here are <strong>without</strong> sequence reweighting. My references correct for oversampling (because MSA generates clusters of sequences), by dividing the weight of each sequence within a neighborhood by the size of its neighborhood.  My experience suggests that while tuning the reweighting parameter \(\theta\) does improve the predictions for each dataset, picking a pre-determined \(\theta\) such that \(0&lt;\theta\leq 0.2\) across all datasets doesn’t consistently improve our predictions across datasets and on occasion deteriorates our results. The reader is welcome to use the reweighting logic provided in the notebook to attempt this by themselves.</p>
 
 <style>
 
@@ -271,7 +243,7 @@ td{
   </tbody>
 </table>
 
-<p>I also run the same process on 5 other available datasets. Below I show the comparison between the VAE’s performance and that of the EVmutation (Hopf et al.). As it can be seen, our method mostly outperforms the independent model, meaning we are capturing higher-order interactions in the sequence. However, it also appears that our model occasionally misses out on learning some pairwise interactions. Note that the <script type="math/tex">P</script> matrix in this comparison is slightly more complicated (see notebook for details).</p>
+<p>I also run the same process on 5 other available datasets. Below I show the comparison between the VAE’s performance and that of the EVmutation (Hopf et al.). As it can be seen, our method mostly outperforms the independent model, meaning we are capturing higher-order interactions in the sequence. However, it also appears that our model occasionally misses out on learning some pairwise interactions. Note that the \(P\) matrix in this comparison is slightly more complicated (see notebook for details).</p>
 
 <p><img src="http://localhost:4000/images/meta_comp.png" /></p>
 
@@ -283,7 +255,7 @@ td{
 
 <p><img src="http://localhost:4000/images/full_latent.png" /></p>
 
-<p>There is more information to be extracted from the latent space. I redraw this structure, but color the background by computing the <script type="math/tex">\mathbb{P}(\sigma_{wt})</script> at each location using the <script type="math/tex">H_{wt}</script> as input and <script type="math/tex">P</script> as the PWM induced by that point in the latent space. White areas are where wildtype occurs with the same probability as it’s own coordinate in the latent space. Red means that wildtype is less favored in those locations, and blue means it is more favored. To better understand the basis of this structure, I have now also color coded the training data using k-means clustering.</p>
+<p>There is more information to be extracted from the latent space. I redraw this structure, but color the background by computing the \(\mathbb{P}(\sigma_{wt})\) at each location using the \(H_{wt}\) as input and \(P\) as the PWM induced by that point in the latent space. White areas are where wildtype occurs with the same probability as it’s own coordinate in the latent space. Red means that wildtype is less favored in those locations, and blue means it is more favored. To better understand the basis of this structure, I have now also color coded the training data using k-means clustering.</p>
 
 <p><img src="http://localhost:4000/images/combined_latent.jpeg" /></p>
 
@@ -325,65 +297,21 @@ td{
 
 <p>[5]: Ingraham, John, and Debora Marks. “Variational Inference for Sparse and Undirected Models.” ICML 2017</p>
 
-  </div>
 
-  
-</article>
 
-      </div>
-    </main>
+  <small>tags: <em></em></small>
 
-    <footer class="site-footer">
 
-  <div class="wrapper">
 
-    <h2 class="footer-heading">Sam Sinai&#39;s blog</h2>
-
-    <div class="footer-col-wrapper">
-      <div class="footer-col footer-col-1">
-        <ul class="contact-list">
-          <li>
-            
-              Sam Sinai&#39;s blog
-            
-            </li>
-            
-            <li><a href="mailto:firstnamelastname@g.harvard dot edu">firstnamelastname@g.harvard dot edu</a></li>
-            
-        </ul>
-      </div>
-
-      <div class="footer-col footer-col-2">
-        <ul class="social-media-list">
-          
-          <li>
-            <a href="https://github.com/samsinai"><span class="icon icon--github"><svg viewBox="0 0 16 16" width="16px" height="16px"><path fill="#828282" d="M7.999,0.431c-4.285,0-7.76,3.474-7.76,7.761 c0,3.428,2.223,6.337,5.307,7.363c0.388,0.071,0.53-0.168,0.53-0.374c0-0.184-0.007-0.672-0.01-1.32 c-2.159,0.469-2.614-1.04-2.614-1.04c-0.353-0.896-0.862-1.135-0.862-1.135c-0.705-0.481,0.053-0.472,0.053-0.472 c0.779,0.055,1.189,0.8,1.189,0.8c0.692,1.186,1.816,0.843,2.258,0.645c0.071-0.502,0.271-0.843,0.493-1.037 C4.86,11.425,3.049,10.76,3.049,7.786c0-0.847,0.302-1.54,0.799-2.082C3.768,5.507,3.501,4.718,3.924,3.65 c0,0,0.652-0.209,2.134,0.796C6.677,4.273,7.34,4.187,8,4.184c0.659,0.003,1.323,0.089,1.943,0.261 c1.482-1.004,2.132-0.796,2.132-0.796c0.423,1.068,0.157,1.857,0.077,2.054c0.497,0.542,0.798,1.235,0.798,2.082 c0,2.981-1.814,3.637-3.543,3.829c0.279,0.24,0.527,0.713,0.527,1.437c0,1.037-0.01,1.874-0.01,2.129 c0,0.208,0.14,0.449,0.534,0.373c3.081-1.028,5.302-3.935,5.302-7.362C15.76,3.906,12.285,0.431,7.999,0.431z"/></svg>
-</span><span class="username">samsinai</span></a>
-
-          </li>
-          
-
-          
-          <li>
-            <a href="https://twitter.com/samsinai"><span class="icon icon--twitter"><svg viewBox="0 0 16 16" width="16px" height="16px"><path fill="#828282" d="M15.969,3.058c-0.586,0.26-1.217,0.436-1.878,0.515c0.675-0.405,1.194-1.045,1.438-1.809c-0.632,0.375-1.332,0.647-2.076,0.793c-0.596-0.636-1.446-1.033-2.387-1.033c-1.806,0-3.27,1.464-3.27,3.27 c0,0.256,0.029,0.506,0.085,0.745C5.163,5.404,2.753,4.102,1.14,2.124C0.859,2.607,0.698,3.168,0.698,3.767 c0,1.134,0.577,2.135,1.455,2.722C1.616,6.472,1.112,6.325,0.671,6.08c0,0.014,0,0.027,0,0.041c0,1.584,1.127,2.906,2.623,3.206 C3.02,9.402,2.731,9.442,2.433,9.442c-0.211,0-0.416-0.021-0.615-0.059c0.416,1.299,1.624,2.245,3.055,2.271 c-1.119,0.877-2.529,1.4-4.061,1.4c-0.264,0-0.524-0.015-0.78-0.046c1.447,0.928,3.166,1.469,5.013,1.469 c6.015,0,9.304-4.983,9.304-9.304c0-0.142-0.003-0.283-0.009-0.423C14.976,4.29,15.531,3.714,15.969,3.058z"/></svg>
-</span><span class="username">samsinai</span></a>
-
-          </li>
-          
-        </ul>
-      </div>
-
-      <div class="footer-col footer-col-3">
-        <p>This blog is dedicated to communicating my work in computational biology. 
-</p>
-      </div>
+      </section>
+      <footer>
+        
+        <p>This project is maintained by <a href="https://github.com/samsinai">samsinai</a></p>
+        
+        <p><small>Hosted on GitHub Pages &mdash; Theme by <a href="https://github.com/orderedlist">orderedlist</a></small></p>
+      </footer>
     </div>
-
-  </div>
-
-</footer>
-
-
+    <script src="/assets/js/scale.fix.js"></script>
+    
   </body>
-
 </html>
