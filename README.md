@@ -10,22 +10,22 @@ I'm a co-founder at [Dyno Therapeutics](http://www.dynotx.com) where I lead the 
 
 [Variational auto-encoding of protein sequences](https://arxiv.org/pdf/1712.03346.pdf) - Sam Sinai, Eric Kelsic, George Church, and Martin Nowak. 2017
 
-*A complete list is available on [Google Scholar](https://scholar.google.com/citations?user=4k0EcsIAAAAJ&hl=en)*
+*A complete list is available on [Google Scholar](https://scholar.google.com/citations?user=4k0EcsIAAAAJ&hl=en)*. 
 
 ## Selected Talks
 
-[An introduction to model-guided sequence design and it's application to AAVs](https://www.youtube.com/watch?v=QLURMsm72cE) with Eric Kelsic at the [Broad MIA](https://www.broadinstitute.org/talks/spring-2021/mia), 2020
+[Machine-guided capsid engineering for gene therapy](https://www.youtube.com/watch?v=QLURMsm72cE) with Eric Kelsic at the [Broad MIA](https://www.broadinstitute.org/talks/spring-2021/mia), 2020
 
-**Massively Parallel Deep Diversification of AAV Capsid Proteins by Machine Learning** - Drew Bryant\*, Ali Bashir\*, Sam Sinai\*, Nina Jain, Pierce Ogden, Patrick Riley, George Church, Lucy Colwell, Eric Kelsic, ASGCT 2020
+**Massively Parallel Deep Diversification of AAV Capsid Proteins by Machine Learning** - Drew Bryant\*, Ali Bashir\*, Sam Sinai\*, Nina Jain, Pierce Ogden, Patrick Riley, George Church\^, Lucy Colwell\^, Eric Kelsic\^, ASGCT 2020
 
 **Machine-Guided Design of AAV Capsid Proteins with Experimentally Augmented Evolutionary Data** - Sam Sinai, Eric Kelsic, Javen Tan, Nina Jain, Pierce Ogden, Martin Nowak, George Church, ASGCT 2019
 
 
-## Service
+## Scientific service
 
 *Reviewer*:  NeuIPS, ICLR, ICML. 
 
-*Public communication*: [My Science blog on Quora](https://www.quora.com/q/darwinsvr). 
+*Public communication*: [My science blog on Quora](https://www.quora.com/q/darwinsvr). 
 
 
 
