@@ -4,12 +4,11 @@ I'm a co-founder at [Dyno Therapeutics](http://www.dynotx.com) where I lead the 
 
 ## Selected Publications
 
-[AdaLead: A simple and robust adaptive greedy search algorithm for sequence design](https://arxiv.org/abs/2010.02141) - Sam Sinai\*, Richard Wang\*, Alexander Whatley\*, Stewart Slocum, Elina Locane, Eric Kelsic. 2020
-  *Design your own algorithms with this sandbox*: [github.com/samsinai/FLEXS](https://github.com/samsinai/FLEXS)
+[AdaLead: A simple and robust adaptive greedy search algorithm for sequence design](https://arxiv.org/abs/2010.02141) - Sam Sinai\*, Richard Wang\*, Alexander Whatley\*, Stewart Slocum, Elina Locane, Eric Kelsic. 2020, *Code*: [github.com/samsinai/FLEXS](https://github.com/samsinai/FLEXS)
 
 [Comprehensive AAV capsid fitness landscape reveals a viral gene and enables machine-guided design](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7197022/) - Pierce Ogden\*, Eric Kelsic\*, Sam Sinai, and George M Church. 2019 
 
-[Variational auto-encoding of protein sequences](https://arxiv.org/pdf/1712.03346.pdf) - Sam Sinai, Eric Kelsic^, George Church^, and Martin Nowak^. 2017
+[Variational auto-encoding of protein sequences](https://arxiv.org/pdf/1712.03346.pdf) - Sam Sinai, Eric Kelsic^, George Church^, and Martin Nowak^. 2017, *Code*: [github.com/samsinai/VAE_protein_function](https://github.com/samsinai/VAE_protein_function)
 
 *A complete list is available on [Google Scholar](https://scholar.google.com/citations?user=4k0EcsIAAAAJ&hl=en)*. 
 
