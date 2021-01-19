@@ -28,11 +28,11 @@ Machine-Guided Design of AAV Capsid Proteins with Experimentally Augmented Evolu
 
 - [What makes ML in computational biology especially difficult?](https://qr.ae/Tcnowc)
 
-- [Why is water transparent?](https://qr.ae/pNmkdR)
-
 - [What is the most primitive form of life?](https://qr.ae/pNDAxm)
 
 - [What are some lesser known facts about Stephen Hawking?](https://qr.ae/pNmkdP)
+
+- [Why is water transparent?](https://qr.ae/pNmkdR)
 
 Blog posts explaining my work (pardon some formatting issues):
 - [Coupon collecting, viral sex, and evolution](_posts/2018-03-29-Coupon-collecting,-viral-sex,-and-evolution.markdown). 2018
