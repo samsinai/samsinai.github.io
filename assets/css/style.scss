@@ -2,8 +2,11 @@
 ---
 
 @import "{{ site.theme }}";
-a {
-  color: red;
+body {
+  background-color: lightblue;
+}
+a{
+  color: ;
 }
 a:hover {
   color: hotpink;
