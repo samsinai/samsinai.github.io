@@ -2,11 +2,9 @@
 ---
 
 @import "{{ site.theme }}";
-a:link {
+a {
   color: red;
 }
-
-/* mouse over link */
 a:hover {
   color: hotpink;
 }
