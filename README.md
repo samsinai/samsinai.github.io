@@ -24,7 +24,7 @@ Machine-Guided Design of AAV Capsid Proteins with Experimentally Augmented Evolu
 
 *Reviewer*:  NeuIPS, ICLR, ICML. 
 
-*Science communication*: [My science blog on Quora](https://www.quora.com/q/darwinsvr). 
+*Science communication*: [My science blog on Quora](https://www.quora.com/q/darwinsvr). Some older posts below.
 
 - [What makes ML in computational biology especially difficult?](https://qr.ae/Tcnowc)
 
