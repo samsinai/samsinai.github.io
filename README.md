@@ -1,6 +1,6 @@
 
 ## About
-I'm a co-founder at [Dyno Therapeutics](http://www.dynotx.com) where I lead the machine learning team. From 2014 to 2019, I was a PhD student at Harvard. During this time, I closely worked with, and was mentored by [Eric Kelsic](https://www.linkedin.com/in/kelsic) in the lab of [George Church](http://arep.med.harvard.edu/). During my PhD, I built [machine learning and sampling algorithms](https://arxiv.org/abs/2010.10614) for efficient protein design.  I was also interested in using these engineering tools to understand and model fitness landscapes. Early in my PhD studies, I was focused on theoretical aspects of origins of life. I'm fascinated by organisms at the [boundary of living and non-living](https://www.forbes.com/sites/quora/2016/10/10/what-did-the-earliest-life-on-earth-look-like/?sh=4320acea6f26). I have previously studied computer science with emphasis on computational biology and A.I. at MIT. I immigrated from Iran, where [I briefly attened medical school](https://qz.com/343467/why-i-became-a-computer-scientist-instead-of-a-doctor/).
+I'm a co-founder at [Dyno Therapeutics](http://www.dynotx.com) where I lead the machine learning team. From 2014 until my graduation in 2019, I was a PhD student at Harvard. During this time, I closely worked with, and was mentored by [Eric Kelsic](https://www.linkedin.com/in/kelsic) in the lab of [George Church](http://arep.med.harvard.edu/). During grad school, I built [machine learning and sampling algorithms](https://arxiv.org/abs/2010.10614) for efficient protein design.  I was also interested in using these engineering tools to understand and model fitness landscapes. Early in my PhD studies, I was focused on theoretical aspects of origins of life. I'm fascinated by organisms at the [boundary of living and non-living](https://www.forbes.com/sites/quora/2016/10/10/what-did-the-earliest-life-on-earth-look-like/?sh=4320acea6f26). I have previously studied computer science with emphasis on computational biology and A.I. at MIT. I immigrated from Iran, where [I briefly attened medical school](https://qz.com/343467/why-i-became-a-computer-scientist-instead-of-a-doctor/).
 
 ## Selected Publications
 
@@ -20,7 +20,7 @@ Massively Parallel Deep Diversification of AAV Capsid Proteins by Machine Learni
 
 Machine-Guided Design of AAV Capsid Proteins with Experimentally Augmented Evolutionary Data - Sam Sinai\*, Eric Kelsic\*, Javen Tan, Nina Jain, Pierce Ogden, Martin Nowak^, George Church^, ASGCT 2019
 
-## Scientific service
+## Scientific "extracurriculars"
 
 *Reviewer*:  NeuIPS, ICLR, ICML. 
 
@@ -40,7 +40,7 @@ Blog posts explaining my work (pardon some formatting issues):
 - [Using a Variational Auto-encoder to predict protein function](_posts/2017-08-14-Using-a-Variational-Autoencoder-to-predict-protein-function.markdown). 2017
 
 
-
+## Random 
 
 
 
