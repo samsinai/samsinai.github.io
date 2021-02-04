@@ -40,7 +40,13 @@ Blog posts explaining my work (pardon some formatting issues):
 - [Using a Variational Auto-encoder to predict protein function](_posts/2017-08-14-Using-a-Variational-Autoencoder-to-predict-protein-function.markdown). 2017
 
 
-## Random 
+## Fun
+
+no. 
+
+
+
+
 
 
 
