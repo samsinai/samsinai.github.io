@@ -6,8 +6,6 @@ I'm a co-founder at [Dyno Therapeutics](http://www.dynotx.com) where I lead the 
 
 [Deep diversification of an AAV capsid protein by machine learning](https://www.nature.com/articles/s41587-020-00793-4)- Drew H. Bryant\*, Ali Bashir\*, Sam Sinai\*, Nina K. Jain, Pierce J. Ogden, Patrick F. Riley, George M. Church^, Lucy J. Colwell^, Eric D. Kelsic^. 2021. *[Code](https://github.com/churchlab/Deep_diversification_AAV)*.
 
-[AdaLead: A simple and robust adaptive greedy search algorithm for sequence design](https://arxiv.org/abs/2010.02141) - Sam Sinai\*, Richard Wang\*, Alexander Whatley\*, Stewart Slocum, Elina Locane, Eric Kelsic. 2021. *[Code](https://github.com/samsinai/FLEXS)*.
-
 [AdaLead: A simple and robust adaptive greedy search algorithm for sequence design](https://arxiv.org/abs/2010.02141) - Sam Sinai\*, Richard Wang\*, Alexander Whatley\*, Stewart Slocum, Elina Locane, Eric Kelsic. 2020. *[Code](https://github.com/samsinai/FLEXS)*.
 
 [Comprehensive AAV capsid fitness landscape reveals a viral gene and enables machine-guided design](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7197022/) - Pierce Ogden\*, Eric Kelsic\*, Sam Sinai, and George M Church. 2019. *[Code](https://github.com/churchlab/AAV_fitness_landscape)*.
