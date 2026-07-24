@@ -24,7 +24,7 @@ Machine-Guided Design of AAV Capsid Proteins with Experimentally Augmented Evolu
 
 ## Scientific "extracurriculars"
 
-*Reviewer*:  NeuIPS, ICLR, ICML. 
+*Reviewer*:  NeurIPS, ICLR, ICML.
 
 *Science communication*: [My science blog on Quora](https://www.quora.com/q/darwinsvr). Some older posts below.
 
@@ -45,7 +45,6 @@ Blog posts explaining my work (pardon some formatting issues):
 ## Fun?
 
 no. 
-
 
 
 

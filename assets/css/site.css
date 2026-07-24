@@ -27,7 +27,21 @@ body {
 body {
   position: relative;
   font-family: var(--sans);
+  transition: background-color 220ms ease, color 220ms ease;
   -webkit-font-smoothing: antialiased;
+}
+
+body.soundcloud-mode {
+  --paper: #161713;
+  --ink: #eee8d9;
+  --muted: #bdb5a6;
+  --line: rgba(238, 232, 217, 0.22);
+  --purple: #b6a2c0;
+}
+
+body.soundcloud-mode::before {
+  filter: invert(1);
+  opacity: 0.1;
 }
 
 body::before {
@@ -185,6 +199,7 @@ h1 {
   image-rendering: auto;
   mix-blend-mode: darken;
   opacity: 0.28;
+  transition: filter 220ms ease;
 }
 
 #search-trace {
@@ -192,6 +207,16 @@ h1 {
   inset: 0;
   pointer-events: none;
   opacity: 0.28;
+  transition: filter 220ms ease;
+}
+
+body.soundcloud-mode #portrait-search {
+  filter: invert(1) grayscale(1);
+  mix-blend-mode: screen;
+}
+
+body.soundcloud-mode #search-trace {
+  filter: invert(1) grayscale(1);
 }
 
 .photo-link {
@@ -230,6 +255,11 @@ h1 {
 .photo-link--profile {
   top: 79%;
   left: 20%;
+}
+
+.photo-link--soundcloud {
+  top: 27%;
+  left: 12%;
 }
 
 .photo-link--video {

@@ -6,6 +6,7 @@
   const biography = copy?.querySelector("p");
   const portraitFrame = document.querySelector(".search-portrait__canvas");
   const photoLinks = Array.from(document.querySelectorAll(".photo-link"));
+  const soundcloudLink = document.querySelector(".photo-link--soundcloud");
 
   if (!canvas || !traceCanvas || !copy || !headline || !biography || !portraitFrame) return;
 
@@ -18,7 +19,7 @@
   const totalCells = coarseGridSize * coarseGridSize;
   const paper = getComputedStyle(document.documentElement).getPropertyValue("--paper").trim() || "#f3f0e7";
   const ink = getComputedStyle(document.documentElement).getPropertyValue("--ink").trim() || "#17201a";
-  const tracerColors = ["#405448", "#66616b", "#63534d", "#4c5863"];
+  const tracerColors = ["#405448", "#66616b", "#63534d", "#4c5863", "#586252", "#6a5f58"];
   const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
   const source = new Image();
 
@@ -165,11 +166,15 @@
   };
 
   const buildSearchPaths = () => {
+    const midpoint = Math.floor(coarseGridSize / 2);
+
     return [
       buildSearchPath({ minX: 0, maxX: coarseGridSize - 1, minY: 0, maxY: coarseGridSize - 1, startX: 0, startY: 0, localBias: true }),
       buildSearchPath({ minX: 0, maxX: coarseGridSize - 1, minY: 0, maxY: coarseGridSize - 1, startX: coarseGridSize - 1, startY: 0, adaLead: true }),
       buildSearchPath({ minX: 0, maxX: coarseGridSize - 1, minY: 0, maxY: coarseGridSize - 1, startX: 0, startY: coarseGridSize - 1, localBias: true }),
       buildSearchPath({ minX: 0, maxX: coarseGridSize - 1, minY: 0, maxY: coarseGridSize - 1, startX: coarseGridSize - 1, startY: coarseGridSize - 1 }),
+      buildSearchPath({ minX: 0, maxX: coarseGridSize - 1, minY: 0, maxY: coarseGridSize - 1, startX: 0, startY: midpoint }),
+      buildSearchPath({ minX: 0, maxX: coarseGridSize - 1, minY: 0, maxY: coarseGridSize - 1, startX: coarseGridSize - 1, startY: midpoint }),
     ];
   };
 
@@ -482,4 +487,13 @@
   source.src = canvas.dataset.source;
   window.addEventListener("resize", scheduleCopyFit);
   document.fonts?.ready.then(scheduleCopyFit);
+
+  const setSoundcloudMode = (active) => {
+    document.body.classList.toggle("soundcloud-mode", active);
+  };
+
+  soundcloudLink?.addEventListener("mouseenter", () => setSoundcloudMode(true));
+  soundcloudLink?.addEventListener("mouseleave", () => setSoundcloudMode(false));
+  soundcloudLink?.addEventListener("focus", () => setSoundcloudMode(true));
+  soundcloudLink?.addEventListener("blur", () => setSoundcloudMode(false));
 })();
