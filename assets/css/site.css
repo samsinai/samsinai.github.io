@@ -1,0 +1,366 @@
+:root {
+  --paper: #f3f0e7;
+  --ink: #17201a;
+  --muted: #697069;
+  --line: rgba(23, 32, 26, 0.2);
+  --coral: #d35f3f;
+  --purple: #6b5875;
+  --serif: "Iowan Old Style", "Palatino Linotype", "Book Antiqua", Palatino, Georgia, serif;
+  --sans: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  --mono: "SFMono-Regular", Consolas, "Liberation Mono", monospace;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  width: 100%;
+  min-height: 100%;
+  margin: 0;
+  overflow: hidden;
+  background: var(--paper);
+  color: var(--ink);
+}
+
+body {
+  position: relative;
+  font-family: var(--sans);
+  -webkit-font-smoothing: antialiased;
+}
+
+body::before {
+  position: fixed;
+  z-index: 0;
+  inset: 0;
+  background-image:
+    radial-gradient(circle at 1px 1px, rgba(23, 32, 26, 0.12) 0 0.45px, transparent 0.65px),
+    radial-gradient(circle at 2px 2px, rgba(23, 32, 26, 0.07) 0 0.35px, transparent 0.55px);
+  background-position: 0 0, 3px 4px;
+  background-size: 7px 7px, 11px 11px;
+  content: "";
+  opacity: 0.16;
+  pointer-events: none;
+}
+
+a {
+  color: inherit;
+  text-underline-offset: 0.18em;
+}
+
+a:focus-visible {
+  outline: 2px solid var(--coral);
+  outline-offset: 4px;
+}
+
+.page {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  grid-template-rows: auto minmax(0, 1fr);
+  width: min(1380px, 100%);
+  height: 100svh;
+  margin: 0 auto;
+  padding: clamp(22px, 3.5vh, 46px) clamp(22px, 4vw, 64px);
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  gap: 36px;
+  align-items: start;
+  padding-bottom: clamp(16px, 2.3vh, 26px);
+  border-bottom: 1px solid var(--line);
+}
+
+.identity {
+  display: flex;
+  gap: 24px;
+  align-items: baseline;
+}
+
+.identity p {
+  margin: 0;
+  color: var(--muted);
+  font-size: 0.77rem;
+}
+
+.name,
+.links a {
+  font-family: var(--mono);
+  font-size: 0.66rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-decoration: none;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+.native-name {
+  margin-left: 0.5em;
+  font-family: var(--sans);
+  font-weight: 400;
+  letter-spacing: 0;
+  opacity: 0.58;
+  text-transform: none;
+}
+
+.links {
+  display: flex;
+  gap: clamp(14px, 2vw, 28px);
+}
+
+.links a:hover {
+  color: var(--coral);
+}
+
+.content {
+  display: grid;
+  grid-template-areas: "visual copy";
+  grid-template-columns: minmax(360px, 0.9fr) minmax(420px, 1.1fr);
+  gap: clamp(18px, 2.5vw, 42px);
+  align-items: center;
+  min-height: 0;
+  padding: clamp(12px, 2vh, 24px) 0 0;
+}
+
+.copy {
+  grid-area: copy;
+  align-self: center;
+}
+
+h1 {
+  margin: 0 0 clamp(24px, 4vh, 44px);
+  font-family: var(--serif);
+  font-size: clamp(1.75rem, 2.7vw, 3.1rem);
+  font-weight: 400;
+  letter-spacing: -0.048em;
+  line-height: 0.96;
+}
+
+.title-line {
+  display: block;
+  white-space: nowrap;
+}
+
+.copy p {
+  max-width: 744px;
+  margin: 0;
+  padding-top: clamp(16px, 2.4vh, 26px);
+  border-top: 1px solid var(--line);
+  color: var(--muted);
+  font-family: var(--serif);
+  font-size: clamp(0.88rem, 1.05vw, 1.05rem);
+  letter-spacing: -0.006em;
+  line-height: 1.5;
+}
+
+.search-portrait {
+  grid-area: visual;
+  display: grid;
+  place-items: center end;
+  min-width: 0;
+  height: 100%;
+  margin: 0;
+  overflow: hidden;
+}
+
+.search-portrait__canvas {
+  position: relative;
+  width: min(100%, calc(100svh - 138px));
+  max-width: 720px;
+  aspect-ratio: 1;
+}
+
+.search-portrait canvas {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 1;
+}
+
+#portrait-search {
+  background: var(--paper);
+  image-rendering: auto;
+  mix-blend-mode: darken;
+  opacity: 0.28;
+}
+
+#search-trace {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  opacity: 0.28;
+}
+
+.photo-link {
+  position: absolute;
+  z-index: 2;
+  padding: 3px 4px;
+  background: var(--paper);
+  color: var(--purple);
+  font-family: var(--mono);
+  font-size: clamp(0.48rem, 0.65vw, 0.62rem);
+  font-weight: 600;
+  letter-spacing: 0.07em;
+  line-height: 1;
+  opacity: 0;
+  text-decoration: none;
+  text-transform: uppercase;
+  transition: color 160ms ease, opacity 240ms ease;
+  white-space: nowrap;
+}
+
+.photo-link.is-revealed {
+  opacity: 0.72;
+}
+
+.photo-link:hover,
+.photo-link:focus-visible {
+  color: var(--ink);
+  opacity: 1;
+}
+
+.photo-link:focus-visible {
+  outline: 1px solid var(--coral);
+  outline-offset: 1px;
+}
+
+.photo-link--profile {
+  top: 79%;
+  left: 20%;
+}
+
+.photo-link--video {
+  top: 84%;
+  left: 30%;
+}
+
+.photo-link--scholar {
+  top: 18%;
+  left: 76%;
+  transform: translateX(-100%);
+}
+
+.photo-link--github {
+  top: 32%;
+  left: 82%;
+  transform: translateX(-100%);
+}
+
+.photo-link--x {
+  top: 47%;
+  left: 80%;
+  transform: translateX(-100%);
+}
+
+.photo-link--linkedin {
+  top: 62%;
+  left: 74%;
+  transform: translateX(-100%);
+}
+
+@media (max-width: 800px) {
+  .page {
+    padding: 22px;
+  }
+
+  .header {
+    gap: 18px;
+  }
+
+  .identity {
+    display: block;
+  }
+
+  .identity p {
+    max-width: 250px;
+    margin-top: 7px;
+    font-size: 0.69rem;
+    line-height: 1.35;
+  }
+
+  .links {
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+    gap: 8px 16px;
+  }
+
+  .content {
+    grid-template-columns: minmax(260px, 1fr) minmax(280px, 1fr);
+    gap: 12px;
+  }
+
+  h1 {
+    font-size: clamp(1.8rem, 4.8vw, 2.5rem);
+  }
+
+  .copy p {
+    font-size: clamp(0.78rem, 1.8vw, 0.94rem);
+  }
+}
+
+@media (max-width: 520px) {
+  html,
+  body {
+    overflow: auto;
+  }
+
+  .page {
+    grid-template-rows: auto auto;
+    min-height: 100svh;
+    height: auto;
+    padding: 18px 16px 22px;
+  }
+
+  .header {
+    align-items: start;
+    padding-bottom: 12px;
+  }
+
+  .identity p {
+    max-width: 190px;
+    font-size: 0.61rem;
+  }
+
+  .links {
+    grid-template-columns: 1fr;
+    gap: 5px;
+  }
+
+  .links a {
+    font-size: 0.58rem;
+  }
+
+  .content {
+    grid-template-areas:
+      "copy"
+      "visual";
+    grid-template-columns: 1fr;
+    grid-template-rows: auto minmax(0, 1fr);
+    gap: 10px;
+    padding-top: 10px;
+  }
+
+  h1 {
+    margin-bottom: 14px;
+    font-size: clamp(1.65rem, 7vw, 2.1rem);
+    line-height: 0.96;
+  }
+
+  .copy p {
+    padding-top: 12px;
+    font-size: 0.72rem;
+    line-height: 1.34;
+  }
+
+  .search-portrait {
+    place-items: center;
+    height: auto;
+  }
+
+  .search-portrait__canvas {
+    width: min(100%, 34svh);
+  }
+}
